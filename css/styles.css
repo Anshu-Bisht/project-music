@@ -30,6 +30,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
     font-size: 2 em;
+   
     
 }
 
@@ -71,12 +72,7 @@ h1{
     margin-bottom: 1em;
 }
 
-#chicken-id, #beef-id, #sushi-id {
-    width: 100%;
-    padding: 20px;
-    background-color: #37f7ed;
-    margin-bottom: 60px;
-}
+
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
     /* ------------------------------------------------------------------------------------------ */
@@ -102,7 +98,8 @@ h1{
         position: fixed;
         top: -100vh;
         z-index: 50;
-        background-color: #16162d;
+        margin-left:-15px;
+        background: radial-gradient(rgb(151, 36, 36),black);
         border-bottom-right-radius: 100%;
         border-bottom-left-radius: 100%;
         transition: all 650ms cubic-bezier(1,0,0,1);
@@ -126,7 +123,7 @@ h1{
     }
     .nav_link:hover,
     .nav_link:focus{
-        background: linear-gradient(to top, #ffe838, #fd57bf);
+        background: linear-gradient(to top, yellow,red);
         background-clip: border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -195,12 +192,16 @@ h1{
     }
     .button-contained{
         
-        padding-left: 100px;
-        padding-right:100px;
-        margin-left: 50px;
+        
+        text-align: center;
     }
     .btn{
         margin: 20px;
         background-color: black;
         color: white;
     }
+    .btn:hover, .btn:active{
+        background-color: brown;
+        color: white;
+    }
+    
