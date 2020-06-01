@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="index.html"><h1>Random Songs</h1></a>
+                    </div>
+                </div>
+                <div class="menu_toggler">
+                    <div class="bar half start"></div>
+                    <div class="bar"></div>
+                    <div class="bar half end"></div>
+                </div>
+                <nav class="top">
+                    <ul class="nav_list">
+                        <li>
+                            <a href="index.html" class="nav_link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav_link">Songs</a>
+                        </li>
+                        <li>
+                            <a href="#education" class="nav_link">Spinning wheel</a>
+                        </li>
+                        <li>
+                            <a href="dice.html" class="nav_link">Dice throw</a>
+                        </li>
+                       
+                    </ul>
+                </nav>
+            </header>
+
+
+               
+            </div>
+        </nav> 
+        
+          
+        
+          
+    </header>   
+
+<div class="button-contained">
+    <button type="button" class="btn btn-primary">Name starting with 'A'</button>
+    <button type="button" class="btn btn-secondary">Name starting with 'B'</button>
+    <button type="button" class="btn btn-success">Name starting with 'C'</button>
+    <button type="button" class="btn btn-danger">Name starting with 'D'</button>
+    <button type="button" class="btn btn-warning">Name starting with 'E'</button>
+    <button type="button" class="btn btn-info">Name starting with 'F'</button>
+    <button type="button" class="btn btn-primary">Name starting with 'G'</button>
+    <button type="button" class="btn btn-secondary">Name starting with 'H'</button>
+    <button type="button" class="btn btn-success">Name starting with 'I'</button>
+    <button type="button" class="btn btn-danger">Name starting with 'J'</button>
+    <button type="button" class="btn btn-warning">Name starting with 'K'</button>
+    <button type="button" class="btn btn-info">Name starting with 'L'</button>
+    <button type="button" class="btn btn-primary">Name starting with 'M'</button>
+    <button type="button" class="btn btn-secondary">Name starting with 'N'</button>
+    <button type="button" class="btn btn-success">Name starting with 'O'</button>
+    <button type="button" class="btn btn-danger">Name starting with 'P'</button>
+    <button type="button" class="btn btn-warning">Name starting with 'Q'</button>
+    <button type="button" class="btn btn-info">Name starting with 'R'</button>
+    <button type="button" class="btn btn-primary">Name starting with 'S'</button>
+    <button type="button" class="btn btn-secondary">Name starting with 'T'</button>
+    <button type="button" class="btn btn-success">Name starting with 'U'</button>
+    <button type="button" class="btn btn-danger">Name starting with 'V'</button>
+    <button type="button" class="btn btn-warning">Name starting with 'W'</button>
+    <button type="button" class="btn btn-info">Name starting with 'X'</button>
+    <button type="button" class="btn btn-primary">Name starting with 'Y'</button>
+    <button type="button" class="btn btn-secondary">Name starting with 'Z'</button>
+</div>
+    
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script>
+        $(document).ready(function () {
+    $('.menu_toggler').on('click', function () {
+        $(this).toggleClass('open');
+        $('.top').toggleClass('open');
+    });
+    $('.top .nav_link').on('click', function () {
+        $('.menu_toggler').removeClass('open');
+        $('.top').removeClass('open');
+    });
+    $('nav a[href*="#"]').on('click', function () {
+        $('html, body').animate( keyframes, {
+            scrollTop: $($(this).attr('href')).offset().top - 100
+        }, options, 2000);
+    });
+    AOS.init({
+        easing: 'ease',
+        duration: 1800,
+        once: true
+    });
+});
+       
+    </script> 
+
+</body>
+</html>
