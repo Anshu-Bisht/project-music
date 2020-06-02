@@ -10,7 +10,7 @@
             body{
                 font-size: 15px;
                 font-family: 'Bitter', serif;
-                background: linear-gradient(to right,yellow,pink)  no-repeat fixed;
+                background: url("music-bg.jpg") no-repeat center fixed;
             }
            h1{
                color:rgb(174, 190, 22);
@@ -18,7 +18,7 @@
                margin-top:0px;
            }
          #header-nav{
-             background:radial-gradient(rgb(44, 38, 27),rgb(218, 107, 107));
+             background:radial-gradient(navy,black);
              
              border-radius: 0;
              border: 0;
@@ -32,6 +32,10 @@
          }
          b{
              margin-left: 20px;
+             color: white;
+         }
+         #songTitle, #songAlbum{
+             color:white;
          }
         
     </style> 
@@ -55,7 +59,7 @@
         <source type="audio/mpeg">
             <br>
             <b>Your outdated browser doesn't support audio.</b>
-    </audio><hr>
+    </audio>
      <br><b>Title</b>: <span id="songTitle"></span><br>
     <b>Singer</b>: <span id="songAlbum"></span><br>
     
