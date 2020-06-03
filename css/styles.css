@@ -9,7 +9,7 @@ body {
     background: radial-gradient(rgb(202, 76, 97),black);
     border-radius: 0;
     border: 0;
-    height:125px;
+    height:100px;
 }
 
 #header-nav button {
@@ -78,7 +78,7 @@ h1{
     /* ------------------------------------------------------------------------------------------ */
     .menu_toggler{
         position: absolute;
-        top: 5rem;
+        top: 2.5rem;
         right: 5rem;
         width: 5rem;
         height: 4rem;
@@ -167,7 +167,7 @@ h1{
             font-size:40px;
         }
         #header-nav{
-            height: 100px;
+            height: 75px;
         }
 
 
@@ -217,4 +217,9 @@ h1{
           color: white;
           padding-top:50px;
       }
+      .img-responsive {
+        display: block;
+        height: auto;
+        max-width: 80%;
+    }
     

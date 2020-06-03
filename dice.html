@@ -138,12 +138,26 @@ body{
 
 /* ------------------------------------------------------------------------------------ */
 
+.ml12 {
+  font-weight: 200;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
     </style>
     
 </head>
 <body>
   
-   <div id="head"><h1>Roll the dice</h1></div> 
+   <div id="head"><h1 class="ml12">Click on dice to know your lucky number</h1>
+   </div> 
    
 <section class="container">
   <div id="cube">
@@ -185,7 +199,7 @@ body{
 
     
    
-    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
        var cube = document.getElementById('cube');
 
@@ -203,6 +217,28 @@ cube.onclick = function() {
 function getRandom(max, min) {
   return (Math.floor(Math.random() * (max-min)) + min) * 90;
 }
+// ----------------------------------------------------------------
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml12 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });
 
 
     </script>
