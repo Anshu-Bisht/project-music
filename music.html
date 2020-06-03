@@ -8,7 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
      <style>
         
-    
+             *{
+                 box-sizing: border-box;
+             }
+             #box{
+                 background-color: white;
+                 width:50%;
+                 margin-left: 10px;
+                 border: 1px solid navy;
+                 border-radius: 30px;
+                 color: white;
+                 text-align: center;
+                 padding: 10px;
+                 padding-bottom: 30px;
+                 margin: auto;
+                 font-size: 1.2em;
+                 background: radial-gradient(rgba(0, 0, 128, 0.876),rgba(32, 23, 23, 0.863));
+             }
+
             body{
                 font-size: 15px;
                 font-family: 'Bitter', serif;
@@ -29,18 +46,29 @@
             }
          .audio-element{
              margin-top: 150px;
-             width: 90%;
+             width: 75%;
              margin-bottom: 100px;
-             margin-left:10px;
+          
+            
          }
-         b{
+         .img-responsive {
+        display: block;
+        height: auto;
+        max-width: 80%;
+    }
+    
+
+         #audio-adjust{
+             text-align: center;
+         }
+         /* b{
              margin-left: 20px;
              color: white;
          }
          #songTitle, #songAlbum{
              color:white;
          }
-        
+         */
     </style> 
 </head>
 <body>
@@ -50,22 +78,24 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <div class="navbar-brand">
-                        <h1>Random Songs</h1>
+                        <a href="index.html"><img src="music-logo.png" class="img-responsive"> </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
    
-   
+   <div id="audio-adjust">
     <audio class="audio-element" controls="true" preload="none">
         <source type="audio/mpeg">
             <br>
             <b>Your outdated browser doesn't support audio.</b>
     </audio>
-     <br><b>Title</b>: <span id="songTitle"></span><br>
-    <b>Singer</b>: <span id="songAlbum"></span><br>
+   </div>
    
+    <div id="box"><br><b>Title</b>: <span id="songTitle"></span><br>
+        <b>Singer</b>: <span id="songAlbum"></span><br>
+       </div> 
     
     <script>
         var songs=[
