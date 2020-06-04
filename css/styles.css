@@ -1,5 +1,5 @@
 body {
-    font-size: 15px;
+    font-size: 8px;
     font-family: 'Bitter', serif;
     background: linear-gradient(to right,yellow,pink)  no-repeat fixed;
 }
@@ -169,7 +169,7 @@ h1{
         #header-nav{
             height: 75px;
         }
-
+        
 
     }
     @media screen and (max-width: 600px){
@@ -183,6 +183,7 @@ h1{
         .nav_link{
             font-size: 3.5rem;
         }
+
      
     }
     @media screen and (max-width: 350px){
