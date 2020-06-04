@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>My musical site</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
+     <style>
+            body{
+                font-size: 15px;
+                font-family: 'Bitter', serif;
+                background: linear-gradient(to right,yellow,pink)  no-repeat fixed;
+            }
+           h1{
+               color:rgb(174, 190, 22);
+               font-size: 70px;
+               margin-top:0px;
+           }
+         #header-nav{
+             background:radial-gradient(rgb(44, 38, 27),rgb(218, 107, 107));
+             
+             border-radius: 0;
+             border: 0;
+             height:125px;
+            }
+         .audio-element{
+             margin-top: 150px;
+             width: 90%;
+             margin-bottom: 100px;
+             margin-left:10px;
+         }
+         b{
+             margin-left: 20px;
+         }
+        
+    </style> 
+</head>
+<body>
+   
+    <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <h1>Random Songs</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+   
+   
+    <audio class="audio-element" controls="true" preload="none">
+        <source type="audio/mpeg">
+            <br>
+            <b>Your outdated browser doesn't support audio.</b>
+    </audio><hr>
+     <br><b>Title</b>: <span id="songTitle"></span><br>
+    <b>Singer</b>: <span id="songAlbum"></span><br>
+    
+    <script>
+        var songs=[
+        {filename: "songs/can_we_kiss.mp3", title: "Can we kiss", singer: "Unknown" },
+               {filename: "songs/filhaal.mp3", title: "Filhaal tone", singer: "Arijit Singh" },
+               {filename: "songs/love me like u do.mp3", title: "love me like you do", singer: "Ellie Goulding" },
+               {filename: "songs/naina arijit singh.mp3", title: "Naina", singer: "Arijit Singh" },
+               {filename: "songs/Nazm nazm.mp3", title: "Nazm nazm", singer: "Ayushman Khurana" },
+               {filename: "songs/on my way", title: "On my way", singer: "Alen Walker" },
+               {filename: "songs/Perfect.mp3", title: "Perfect", singer: "Ed Shreen" },
+               {filename: "songs/pubg.mp3", title: "Pubg song", singer: "Unknown" },
+               {filename: "songs/rabb wangu.mp3", title: "Rabb wangu", singer: "Jass Manak" },
+               {filename: "songs/relation.mp3", title: "Relation", singer: "Nikk" },
+               {filename: "songs/rula_ke_gaya.mp3", title: "rula k gaya", singer: "Unknown" },
+               {filename: "songs/sad_flute.mp3", title: "sau dard", singer: "Unknown" },
+               {filename: "songs/See you again.mp3", title: "See you again", singer: "Unknown" },
+               {filename: "songs/senorita.mp3", title: "Senorita", singer: "Camila Cabello" },
+               {filename: "songs/shayad.mp3", title: "Shaayad", singer: "Arijit Singh" },
+               {filename: "songs/sohneya.mp3", title: "Sohneya", singer: "Unknown" },
+               {filename: "songs/tere sang yara.mp3", title: "Tere sang yara", singer: "Atif Aslam" },
+               {filename: "songs/tu_hi_yaar_mera.mp3", title: "Tu hi yaar mera", singer: "Arijeet Singh, Neha Kakkar" },
+               {filename: "songs/tujhe kitna chahne lge.mp3", title: "Tujhe kitna chahne lge hm", singer: "Arijit Singh" },
+               {filename: "songs/tum_hi_ana.mp3", title: "Tum hi ana", singer: "Jubin Nautiyal" },
+           
+           {filename: "songs/Despacito.mp3", title: "Despacito", singer: "Louis Founsi" }
+        ];
+        var randomIndex= Math.floor(Math.random()*songs.length);
+        var song=songs[randomIndex];
+        document.querySelector("source").src=song.filename;
+        document.getElementById("songTitle").textContent=song.title;
+        document.getElementById("songAlbum").textContent=song.singer;
+
+    </script>
+</body>

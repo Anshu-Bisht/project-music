@@ -48,6 +48,7 @@
              margin-top: 150px;
              width: 75%;
              margin-bottom: 100px;
+             margin-left: 100px;
           
             
          }
@@ -177,13 +178,13 @@
         </nav>
     </header>
    
-   <div id="audio-adjust">
+   
     <audio class="audio-element" controls="true" preload="none">
         <source type="audio/mpeg">
             <br>
             <b>Your outdated browser doesn't support audio.</b>
     </audio>
-   </div>
+
    <div class="fav">
     <h1 class="ml6">
         <span class="text-wrapper">
@@ -200,56 +201,7 @@
     
       </div> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script>
-        var songs=[
-            {filename: "songs/Closer - The Chainsmokers Ft Halse (DJJOhAL.Com).mp3", title: "Closer", singer: "Chainsmokers"}
-           , {filename: "songs/Tere Bin Nahi Lagda.mp3", title: "Tere Bin Nahi Lagda", singer: "Unknown" },
-           {filename: "songs/Pikachu.mp3", title: "Pikachu", singer: "Unknown" },
-           {filename: "songs/Bulave Tujhe.mp3", title: "Bulave tujhe yar aj meri galiyan", singer: "Akhil" },
-           {filename: "songs/Vaste", title: "Vaaste", singer: "Dhvani Bhanushali"},
-           {filename: "songs/_ishq_tera.mp3", title: "ishq tera", singer: "Guru Randhawa" },
-           {filename: "songs/can_we_kiss.mp3", title: "Can we kiss", singer: "Unknown" },
-           {filename: "songs/filhaal.mp3", title: "Filhaal tone", singer: "Arijit Singh" },
-           {filename: "songs/love me like u do.mp3", title: "love me like you do", singer: "Ellie Goulding" },
-           {filename: "songs/naina arijit singh.mp3", title: "Naina", singer: "Arijit Singh" },
-           {filename: "songs/Nazm nazm.mp3", title: "Nazm nazm", singer: "Ayushman Khurana" },
-           {filename: "songs/on my way", title: "On my way", singer: "Alen Walker" },
-           {filename: "songs/Perfect.mp3", title: "Perfect", singer: "Ed Shreen" },
-           {filename: "songs/pubg.mp3", title: "Pubg song", singer: "Unknown" },
-           {filename: "songs/rabb wangu.mp3", title: "Rabb wangu", singer: "Jass Manak" },
-           {filename: "songs/relation.mp3", title: "Relation", singer: "Nikk" },
-           {filename: "songs/rula_ke_gaya.mp3", title: "rula k gaya", singer: "Unknown" },
-           {filename: "songs/sad_flute.mp3", title: "sau dard", singer: "Unknown" },
-           {filename: "songs/See you again.mp3", title: "See you again", singer: "Unknown" },
-           {filename: "songs/senorita.mp3", title: "Senorita", singer: "Camila Cabello" },
-           {filename: "songs/shayad.mp3", title: "Shaayad", singer: "Arijit Singh" },
-           {filename: "songs/sohneya.mp3", title: "Sohneya", singer: "Unknown" },
-           {filename: "songs/tere sang yara.mp3", title: "Tere sang yara", singer: "Atif Aslam" },
-           {filename: "songs/tu_hi_yaar_mera.mp3", title: "Tu hi yaar mera", singer: "Arijeet Singh, Neha Kakkar" },
-           {filename: "songs/tujhe kitna chahne lge.mp3", title: "Tujhe kitna chahne lge hm", singer: "Arijit Singh" },
-           {filename: "songs/tum_hi_ana.mp3", title: "Tum hi ana", singer: "Jubin Nautiyal" },
-           {filename: "songs/indian army.mp3", title: "Indian Army", singer: "Sumit Goswami" },
-           {filename:"songs/Yaarr Superstaar - Harrdy Sandu Ringtone.mp3",title:"Yaar Superstar",singer:"Hardy Sandhu"},
-           {filename:"songs/She Dont Know Ringtone.mp3",title:"She don't know",singer:"Millind Gaba"},
-           {filename:"songs/Coka Sukhe Ringtone.mp3",title:"Coka",singer:"Sukhe"},
-           {filename:"songs/First Class - Kalank Ringtone.mp3",title:"First class",singer:"Arijit Singh, Neeti Mohan"},
-           {filename:"songs/Sher Aaya Sher - Gully Boy Ringtone.mp3",title:"Sher aaya sher",singer:" Divine"},
-           {filename:"songs/Photo - Luka Chuppi Ringtone.mp3",title:"Photo",singer:"Darshan Raval "},
-           {filename:"songs/Coca Cola - Luka Chuppi Ringtone.mp3",title:"Coca cola",singer:"Tony Kakkar"},
-           {filename:"songs/Ek Ladki Ko Dekha Toh Aisa Laga New Ringtone.mp3",title:"Ek ladki ko dekha toh",singer:"Darshan Raval"},
-           {filename:"songs/Daru Badnaam Kardi Ringtone.mp3",title:"Daru Badnaam",singer:"Param Singh"},
-           {filename:"songs/Lakdi Ki Kathi.mp3",title:"Lakdi ki kathi",singer:"Unknown"},
-           {filename:"songs/Doraemon_Hindi_58J.mp3",title:"Doraemon",singer:"Unknown"}
-      
-          
-        ];
-        var randomIndex= Math.floor(Math.random()*songs.length);
-        var song=songs[randomIndex];
-        document.querySelector("source").src=song.filename;
-        document.getElementById("songTitle").textContent=song.title;
-        document.getElementById("songAlbum").textContent=song.singer;
-
-    </script>
+   
     <script>// Wrap every letter in a span
         var textWrapper = document.querySelector('.ml6 .letters');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -269,4 +221,54 @@
             delay: 1000
           });
           </script>
+           <script>
+            var songs=[
+                {filename: "songs/Closer - The Chainsmokers Ft Halse (DJJOhAL.Com).mp3", title: "Closer", singer: "Chainsmokers"},
+               {filename: "songs/Tere Bin Nahi Lagda.mp3", title: "Tere Bin Nahi Lagda", singer: "Unknown" },
+               {filename: "songs/Pikachu.mp3", title: "Pikachu", singer: "Unknown" },
+               {filename: "songs/Bulave Tujhe.mp3", title: "Bulave tujhe yar aj meri galiyan", singer: "Akhil" },
+               {filename: "songs/Vaste", title: "Vaaste", singer: "Dhvani Bhanushali"},
+               {filename: "songs/_ishq_tera.mp3", title: "ishq tera", singer: "Guru Randhawa" },
+               {filename: "songs/can_we_kiss.mp3", title: "Can we kiss", singer: "Unknown" },
+               {filename: "songs/filhaal.mp3", title: "Filhaal tone", singer: "Arijit Singh" },
+               {filename: "songs/love me like u do.mp3", title: "love me like you do", singer: "Ellie Goulding" },
+               {filename: "songs/naina arijit singh.mp3", title: "Naina", singer: "Arijit Singh" },
+               {filename: "songs/Nazm nazm.mp3", title: "Nazm nazm", singer: "Ayushman Khurana" },
+               {filename: "songs/on my way", title: "On my way", singer: "Alen Walker" },
+               {filename: "songs/Perfect.mp3", title: "Perfect", singer: "Ed Shreen" },
+               {filename: "songs/pubg.mp3", title: "Pubg song", singer: "Unknown" },
+               {filename: "songs/rabb wangu.mp3", title: "Rabb wangu", singer: "Jass Manak" },
+               {filename: "songs/relation.mp3", title: "Relation", singer: "Nikk" },
+               {filename: "songs/rula_ke_gaya.mp3", title: "rula k gaya", singer: "Unknown" },
+               {filename: "songs/sad_flute.mp3", title: "sau dard", singer: "Unknown" },
+               {filename: "songs/See you again.mp3", title: "See you again", singer: "Unknown" },
+               {filename: "songs/senorita.mp3", title: "Senorita", singer: "Camila Cabello" },
+               {filename: "songs/shayad.mp3", title: "Shaayad", singer: "Arijit Singh" },
+               {filename: "songs/sohneya.mp3", title: "Sohneya", singer: "Unknown" },
+               {filename: "songs/tere sang yara.mp3", title: "Tere sang yara", singer: "Atif Aslam" },
+               {filename: "songs/tu_hi_yaar_mera.mp3", title: "Tu hi yaar mera", singer: "Arijeet Singh, Neha Kakkar" },
+               {filename: "songs/tujhe kitna chahne lge.mp3", title: "Tujhe kitna chahne lge hm", singer: "Arijit Singh" },
+               {filename: "songs/tum_hi_ana.mp3", title: "Tum hi ana", singer: "Jubin Nautiyal" },
+               {filename: "songs/indian army.mp3", title: "Indian Army", singer: "Sumit Goswami" },
+               {filename: "songs/Yaarr Superstaar - Harrdy Sandu Ringtone.mp3",title:"Yaar Superstar",singer:"Hardy Sandhu"},
+               {filename: "songs/She Dont Know Ringtone.mp3",title:"She don't know",singer:"Millind Gaba"},
+               {filename: "songs/Coka Sukhe Ringtone.mp3",title:"Coka",singer:"Sukhe"},
+               {filename: "songs/First Class - Kalank Ringtone.mp3",title:"First class",singer:"Arijit Singh, Neeti Mohan"},
+               {filename: "songs/Sher Aaya Sher - Gully Boy Ringtone.mp3",title:"Sher aaya sher",singer:" Divine"},
+               {filename: "songs/Photo - Luka Chuppi Ringtone.mp3",title:"Photo",singer:"Darshan Raval "},
+               {filename: "songs/Coca Cola - Luka Chuppi Ringtone.mp3",title:"Coca cola",singer:"Tony Kakkar"},
+               {filename: "songs/Ek Ladki Ko Dekha Toh Aisa Laga New Ringtone.mp3",title:"Ek ladki ko dekha toh",singer:"Darshan Raval"},
+               {filename: "songs/Daru Badnaam Kardi Ringtone.mp3",title:"Daru Badnaam",singer:"Param Singh"},
+               {filename: "songs/Lakdi Ki Kathi.mp3",title:"Lakdi ki kathi",singer:"Unknown"},
+               {filename: "songs/Doraemon_Hindi_58J.mp3",title:"Doraemon",singer:"Unknown"}
+          
+              
+            ];
+            var randomIndex= Math.floor(Math.random()*songs.length);
+            var song=songs[randomIndex];
+            document.querySelector("source").src=song.filename;
+            document.getElementById("songTitle").textContent=song.title;
+            document.getElementById("songAlbum").textContent=song.singer;
+    
+        </script>
 </body>
