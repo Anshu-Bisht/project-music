@@ -2,31 +2,20 @@
 <head>
     <meta charset="utf-8">
     <title>Dice</title>
-    
     <style>
- 
-    /* ---------------------------------------------------------------------- */
-      #head{
-        background-color:rgb(35, 35, 39);
-        margin:-20px;
-        margin-top:-20px;
-        height: auto;
-      }
         h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: #fff;
-  font-size: 70px;
-  padding: 20px;
-  margin: 0;
-  width: 100%;
- 
- 
+  background-color:rgb(7, 7, 56);
+  height: auto;
+  font-size: 2.5em;
 }
 body{
   background-color:antiquewhite;
   background : url("dice-bg.jpg") no-repeat center fixed;
   background-size: cover;
+  margin: 0px;
 }
 
 #cube .front {
@@ -78,7 +67,7 @@ body{
 #cube {
   width: 100%;
   height: 100%;
-  top: 200px;
+  top: 100px;
   position: absolute;
   
   transform-style: preserve-3d;
@@ -91,7 +80,7 @@ body{
 }
 
 #cube div {
-  background:rgb(35, 35, 39);
+  background:rgb(7, 7, 56);
   display: block;
   position: absolute;
   width: 200px;
@@ -136,17 +125,85 @@ body{
 .bottom .dot4 { top: 125px; left: 45px; }
 .bottom .dot5 { top: 125px; left: 85px; }
 .bottom .dot6 { top: 125px; left: 125px; }
-
-/* ------------------------------------------------------------------------------------ */
- 
-    </style>
+/* ------------------------------------------------------------------------------ */
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: black;
+    background: linear-gradient(navy,yellow,navy);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
     
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8,black,navy,brown, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+   
+}
+
+.glow-on-hover:active {
+    background: linear-gradient(navy,yellow,navy);
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(navy,yellow,navy);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    
+}
+.glow-on-hover a:hover{
+    text-decoration:none;
+}
+.glow-on-hover a{
+    color: black;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+#set-button{
+    text-align:center;
+    margin-top: 200px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    </style>
 </head>
 <body>
-  
-   <div id="head"><h1>Click on the dice to roll</h1>
-   </div> 
-  
+    <h1>Click on the dice to roll</h1>
 <section class="container">
   <div id="cube">
     <div class="front">
@@ -184,10 +241,13 @@ body{
     </div>
   </div>
 </section>
+<div id="set-button">
+  <button class="glow-on-hover" type="button"><a href="index.html">Back to HOME</a></button> 
 
+</div> 
     
    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
     <script>
        var cube = document.getElementById('cube');
 
@@ -205,28 +265,6 @@ cube.onclick = function() {
 function getRandom(max, min) {
   return (Math.floor(Math.random() * (max-min)) + min) * 90;
 }
-// ----------------------------------------------------------------
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml12 .letter',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i
-  }).add({
-    targets: '.ml12 .letter',
-    translateX: [0,-30],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i
-  });
 
 
     </script>
