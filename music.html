@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>Magickey</title>
-    <link rel = "icon" href =  
-        "images/fav.png"
-        type = "image/x-icon">
+    <title>My musical site</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
@@ -49,9 +46,8 @@
             }
          .audio-element{
              margin-top: 150px;
-             width: 75%;
+             text-align: center;
              margin-bottom: 100px;
-             margin-left: 100px;
           
             
          }
@@ -62,9 +58,12 @@
     }
     
 
-         #audio-adjust{
-             text-align: center;
-         }
+    #audio-adjust {
+    margin-top: 180px;
+    margin-bottom: 100px;
+    text-align: center;
+    margin-left: 25%;
+}
         
 .glow-on-hover {
     width: 220px;
@@ -165,6 +164,9 @@
     text-align: center;
     margin-top: -60px;
 }
+.audiojs{
+    margin-right: 25%;
+}
     </style> 
 </head>
 <body>
@@ -181,13 +183,13 @@
         </nav>
     </header>
    
-   
-    <audio class="audio-element" controls="true" preload="auto">
+   <div id="audio-adjust">
+    <audio class="audio-element" preload="auto">
         <source type="audio/mpeg">
             <br>
             <b>Your outdated browser doesn't support audio.</b>
     </audio>
-
+   </div>
    <div class="fav">
     <h1 class="ml6">
         <span class="text-wrapper">
@@ -204,7 +206,56 @@
     
       </div> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-   
+      <script>
+        var songs=[
+           {filename: "songs/song1.mp3", title: "Closer", singer: "Chainsmokers"},
+           {filename: "songs/song2.mp3", title: "Tere Bin Nahi Lagda", singer: "Unknown" },
+           {filename: "songs/song3.mp3", title: "Pikachu", singer: "Unknown" },
+           {filename: "songs/song4.mp3", title: "Bulave tujhe yar aj meri galiyan", singer: "Akhil"},
+           {filename: "songs/song5.mp3", title: "Vaaste", singer: "Dhvani Bhanushali"},
+           {filename: "songs/song6.mp3", title: "ishq tera", singer: "Guru Randhawa" },
+           {filename: "songs/song7.mp3", title: "Can we kiss", singer: "Unknown" },
+           {filename: "songs/song8.mp3", title: "Filhaal tone", singer: "Arijit Singh" },
+           {filename: "songs/song9.mp3", title: "love me like you do", singer: "Ellie Goulding" },
+           {filename: "songs/song10.mp3", title: "Naina", singer: "Arijit Singh" },
+           {filename: "songs/song11.mp3", title: "Nazm nazm", singer: "Ayushman Khurana" },
+           {filename: "songs/song12.mp3", title: "On my way", singer: "Alen Walker" },
+           {filename: "songs/song13.mp3", title: "Perfect", singer: "Ed Shreen" },
+           {filename: "songs/song14.mp3", title: "Pubg song", singer: "Unknown" },
+           {filename: "songs/song15.mp3", title: "Rabb wangu", singer: "Jass Manak" },
+           {filename: "songs/song16.mp3", title: "Relation", singer: "Nikk" },
+           {filename: "songs/song17.mp3", title: "rula k gaya", singer: "Unknown" },
+           {filename: "songs/song18.mp3", title: "sau dard", singer: "Unknown" },
+           {filename: "songs/song19.mp3", title: "See you again", singer: "Unknown" },
+           {filename: "songs/song20.mp3", title: "Senorita", singer: "Camila Cabello" },
+           {filename: "songs/song21.mp3", title: "Shaayad", singer: "Arijit Singh" },
+           {filename: "songs/song22.mp3", title: "Sohneya", singer: "Unknown" },
+           {filename: "songs/song23.mp3", title: "Tere sang yara", singer: "Atif Aslam" },
+           {filename: "songs/song24.mp3", title: "Tu hi yaar mera", singer: "Arijeet Singh, Neha Kakkar" },
+           {filename: "songs/song25.mp3", title: "Tujhe kitna chahne lge hm", singer: "Arijit Singh" },
+           {filename: "songs/song26.mp3", title: "Tum hi ana", singer: "Jubin Nautiyal" },
+           {filename: "songs/song27.mp3", title: "Indian Army", singer: "Sumit Goswami" },
+           {filename: "songs/song28.mp3", title:"Yaar Superstar",singer:"Hardy Sandhu"},
+           {filename: "songs/song29.mp3",title:"She don't know",singer:"Millind Gaba"},
+           {filename: "songs/song30.mp3",title:"Coka",singer:"Sukhe"},
+           {filename: "songs/song31.mp3",title:"First class",singer:"Arijit Singh, Neeti Mohan"},
+           {filename: "songs/song32.mp3",title:"Sher aaya sher",singer:" Divine"},
+           {filename: "songs/song33.mp3",title:"Photo",singer:"Darshan Raval "},
+           {filename: "songs/song34.mp3",title:"Coca cola",singer:"Tony Kakkar"},
+           {filename: "songs/song35.mp3",title:"Ek ladki ko dekha toh",singer:"Darshan Raval"},
+           {filename: "songs/song36.mp3",title:"Daru Badnaam",singer:"Param Singh"},
+           {filename: "songs/song37.mp3",title:"Lakdi ki kathi",singer:"Unknown"},
+           {filename: "songs/song38.mp3",title:"Doraemon",singer:"Unknown"}
+      
+          
+        ];
+        var randomIndex= Math.floor(Math.random()*songs.length);
+        var song=songs[randomIndex];
+        document.querySelector("source").src=song.filename;
+        document.getElementById("songTitle").textContent=song.title;
+        document.getElementById("songAlbum").textContent=song.singer;
+
+    </script>
     <script>// Wrap every letter in a span
         var textWrapper = document.querySelector('.ml6 .letters');
         textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -224,54 +275,10 @@
             delay: 1000
           });
           </script>
-           <script>
-            var songs=[
-                {filename: "songs/Closer - The Chainsmokers Ft Halse (DJJOhAL.Com).mp3", title: "Closer", singer: "Chainsmokers"},
-               {filename: "songs/Tere Bin Nahi Lagda.mp3", title: "Tere Bin Nahi Lagda", singer: "Unknown" },
-               {filename: "songs/Pikachu.mp3", title: "Pikachu", singer: "Unknown" },
-               {filename: "songs/Bulave Tujhe.mp3", title: "Bulave tujhe yar aj meri galiyan", singer: "Akhil" },
-               {filename: "songs/Vaste.mp3", title: "Vaaste", singer: "Dhvani Bhanushali"},
-               {filename: "songs/ishq_tera.mp3", title: "ishq tera", singer: "Guru Randhawa" },
-               {filename: "songs/can_we_kiss.mp3", title: "Can we kiss", singer: "Unknown" },
-               {filename: "songs/filhaal.mp3", title: "Filhaal tone", singer: "Arijit Singh" },
-               {filename: "songs/love me like u do.mp3", title: "love me like you do", singer: "Ellie Goulding" },
-               {filename: "songs/naina arijit singh.mp3", title: "Naina", singer: "Arijit Singh" },
-               {filename: "songs/Nazm nazm.mp3", title: "Nazm nazm", singer: "Ayushman Khurana" },
-               {filename: "songs/on my way.mp3", title: "On my way", singer: "Alen Walker" },
-               {filename: "songs/Perfect.mp3", title: "Perfect", singer: "Ed Shreen" },
-               {filename: "songs/pubg.mp3", title: "Pubg song", singer: "Unknown" },
-               {filename: "songs/rabb wangu.mp3", title: "Rabb wangu", singer: "Jass Manak" },
-               {filename: "songs/relation.mp3", title: "Relation", singer: "Nikk" },
-               {filename: "songs/rula_ke_gaya_ishq.mp3", title: "rula k gaya", singer: "Unknown" },
-               {filename: "songs/sad_flute.mp3", title: "sau dard", singer: "Unknown" },
-               {filename: "songs/See you again.mp3", title: "See you again", singer: "Unknown" },
-               {filename: "songs/senorita.mp3", title: "Senorita", singer: "Camila Cabello" },
-               {filename: "songs/shayad.mp3", title: "Shaayad", singer: "Arijit Singh" },
-               {filename: "songs/sohneya.mp3", title: "Sohneya", singer: "Unknown" },
-               {filename: "songs/tere sang yara.mp3", title: "Tere sang yara", singer: "Atif Aslam" },
-               {filename: "songs/tu_hi_yaar_mera.mp3", title: "Tu hi yaar mera", singer: "Arijeet Singh, Neha Kakkar" },
-               {filename: "songs/tujhe kitna chahne lge.mp3", title: "Tujhe kitna chahne lge hm", singer: "Arijit Singh" },
-               {filename: "songs/tum_hi_ana.mp3", title: "Tum hi ana", singer: "Jubin Nautiyal" },
-               {filename: "songs/indian army.mp3", title: "Indian Army", singer: "Sumit Goswami" },
-               {filename: "songs/Yaarr Superstaar - Harrdy Sandu Ringtone.mp3",title:"Yaar Superstar",singer:"Hardy Sandhu"},
-               {filename: "songs/She Dont Know Ringtone.mp3",title:"She don't know",singer:"Millind Gaba"},
-               {filename: "songs/Coka Sukhe Ringtone.mp3",title:"Coka",singer:"Sukhe"},
-               {filename: "songs/First Class - Kalank Ringtone.mp3",title:"First class",singer:"Arijit Singh, Neeti Mohan"},
-               {filename: "songs/Sher Aaya Sher - Gully Boy Ringtone.mp3",title:"Sher aaya sher",singer:" Divine"},
-               {filename: "songs/Photo - Luka Chuppi Ringtone.mp3",title:"Photo",singer:"Darshan Raval "},
-               {filename: "songs/Coca Cola - Luka Chuppi Ringtone.mp3",title:"Coca cola",singer:"Tony Kakkar"},
-               {filename: "songs/Ek Ladki Ko Dekha Toh Aisa Laga New Ringtone.mp3",title:"Ek ladki ko dekha toh",singer:"Darshan Raval"},
-               {filename: "songs/Daru Badnaam Kardi Ringtone.mp3",title:"Daru Badnaam",singer:"Param Singh"},
-               {filename: "songs/Lakdi Ki Kathi.mp3",title:"Lakdi ki kathi",singer:"Unknown"},
-               {filename: "songs/Doraemon_Hindi_58J.mp3",title:"Doraemon",singer:"Unknown"}
-          
-              
-            ];
-            var randomIndex= Math.floor(Math.random()*songs.length);
-            var song=songs[randomIndex];
-            document.querySelector("source").src=song.filename;
-            document.getElementById("songTitle").textContent=song.title;
-            document.getElementById("songAlbum").textContent=song.singer;
-    
-        </script>
+          <script src="/audiojs/audio.min.js"></script>
+          <script>
+            audiojs.events.ready(function() {
+              var as = audiojs.createAll();
+            });
+          </script>
 </body>
