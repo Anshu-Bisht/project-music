@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>My musical site</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Magickey</title>
+    <link rel = "icon" href =  
+        "images/fav.png"
+        type = "image/x-icon">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
      <style>
-        
-             *{
+         
+         *{
                  box-sizing: border-box;
              }
              #box{
@@ -25,19 +28,14 @@
                  font-size: 1.2em;
                  background: radial-gradient(rgba(0, 0, 128, 0.876),rgba(32, 23, 23, 0.863));
              }
-
             body{
                 font-size: 15px;
                 font-family: 'Bitter', serif;
                 background: url("music-bg.jpg") no-repeat center fixed;
                 background-size: cover;
             }
-           h1{
-               color:rgb(174, 190, 22);
-               font-size: 70px;
-               margin-top:0px;
-           }
-         #header-nav{
+          
+           #header-nav{
              background:radial-gradient(navy,black);
              
              border-radius: 0;
@@ -45,133 +43,65 @@
              height:125px;
             }
          .audio-element{
-             margin-top: 150px;
-             text-align: center;
-             margin-bottom: 100px;
-          
-            
+             margin-top: 40px;
+             width: 80%;
+             margin-bottom: 80px;
+             margin-left:60px;
+         }
+         b{
+             margin-left: 20px;
          }
          .img-responsive {
         display: block;
         height: auto;
         max-width: 80%;
     }
-    
-
-    #audio-adjust {
-    margin-top: 180px;
-    margin-bottom: 100px;
-    text-align: center;
-    margin-left: 25%;
-}
+   #button-here{
+       text-align: center;
+       margin-top: 10px;
+       width: fit-content;
+       margin-left: auto;
+       margin-right: auto;
+       background-color: navy;
+       height: 40px;
+       border-radius: 10px;
+       padding: 10px;
+       
+   }
+   .btn{
+       /* margin-top: 30px;
+       height:40px; */
+       color: white;
+       text-decoration: none;
+       padding: 20px;
+   }
+   #button-here:hover{
+       color: white;
+       text-decoration: none;
+       background: radial-gradient(navy,black);
+   }
+   /* --------------------------------------------------------------------------- */
+    #head {
+        background: radial-gradient(navy,black);
+        height: auto;
+        margin-top: -135px;
+        margin-left: -10px;
+        margin-right: -10px;
         
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: black;
-    background: linear-gradient(yellow,red);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8,black,navy,brown, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+    }   
+    h1{
+        font-size:200px;
+        padding-bottom: 5px;
+      
+    }
    
-}
-
-.glow-on-hover:active {
-    background: linear-gradient(yellow,red);
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(yellow,red);
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-    
-}
-.glow-on-hover a:hover{
-    text-decoration:none;
-}
-.glow-on-hover a{
-    color: black;
-    font-size: 1.5em;
-}
-#set-button{
-    text-align:center;
-    margin-top: 20px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-/* ------------------------------------------------------------------------------------ */
-/* animation 2 */
-.ml6 {
-  position: relative;
-  font-weight: 100;
-  font-size: 1.5em;
-  color: aliceblue;
-}
-
-.ml6 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml6 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
-.fav{
-    text-align: center;
-    margin-top: -60px;
-}
-.audiojs{
-    margin-right: 25%;
-}
+  
+        
     </style> 
 </head>
 <body>
    
-    <header>
+    <!-- <header>
         <nav id="header-nav" class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -181,34 +111,28 @@
                 </div>
             </div>
         </nav>
-    </header>
-   
-   <div id="audio-adjust">
-    <audio class="audio-element" preload="auto">
+    </header> -->
+    <div id="head">
+        <h1><a href="index.html"><img src="music-logo.png" class="img-responsive"> </a></h1>
+    </div>
+  
+    <audio class="audio-element" controls="true" preload="none">
         <source type="audio/mpeg">
             <br>
             <b>Your outdated browser doesn't support audio.</b>
     </audio>
-   </div>
-   <div class="fav">
-    <h1 class="ml6">
-        <span class="text-wrapper">
-          <span class="letters">Here is your Lucky Song !!</span>
-        </span>
-      </h1>
-   </div>
+ 
    
     <div id="box"><br><b>Title</b>: <span id="songTitle"></span><br>
         <b>Singer</b>: <span id="songAlbum"></span><br>
        </div> 
-      <div id="set-button">
-        <button class="glow-on-hover" type="button"><a href="index.html">Back to HOME</a></button> 
-    
+      <div id="button-here">
+        <a href="index.html" class="btn btn-dark" role="button">BACK TO HOME</a>
+   
       </div> 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-      <script>
+    <script>
         var songs=[
-           {filename: "songs/song1.mp3", title: "Closer", singer: "Chainsmokers"},
+        {filename: "songs/song1.mp3", title: "Closer", singer: "Chainsmokers"},
            {filename: "songs/song2.mp3", title: "Tere Bin Nahi Lagda", singer: "Unknown" },
            {filename: "songs/song3.mp3", title: "Pikachu", singer: "Unknown" },
            {filename: "songs/song4.mp3", title: "Bulave tujhe yar aj meri galiyan", singer: "Akhil"},
@@ -256,29 +180,6 @@
         document.getElementById("songAlbum").textContent=song.singer;
 
     </script>
-    <script>// Wrap every letter in a span
-        var textWrapper = document.querySelector('.ml6 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-        
-        anime.timeline({loop: true})
-          .add({
-            targets: '.ml6 .letter',
-            translateY: ["1.1em", 0],
-            translateZ: 0,
-            duration: 750,
-            delay: (el, i) => 50 * i
-          }).add({
-            targets: '.ml6',
-            opacity: 0,
-            duration: 1000,
-            easing: "easeOutExpo",
-            delay: 1000
-          });
-          </script>
-          <script src="/audiojs/audio.min.js"></script>
-          <script>
-            audiojs.events.ready(function() {
-              var as = audiojs.createAll();
-            });
-          </script>
+   
+         
 </body>
